@@ -19,9 +19,7 @@ services:
 
   db:
     image: postgres:15
-    environment:
-      POSTGRES_USER: decisio
-      POSTGRES_PASSWORD: decisio
-      POSTGRES_DB: decisio
+    env_file:
+      .env.example
     ports:
       - "5432:5432"
